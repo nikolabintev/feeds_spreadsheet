@@ -231,6 +231,8 @@ class FeedsSpreadsheetParser extends FeedsParser {
     );
     $form['sheets']['parse_value'] = array(
       '#type' => 'textfield',
+      '#title' => t('Sheet'),
+      '#description' => t('Enter sheet title or index depending on the selected option.'),
       '#default_value' => $this->config['sheets']['parse_value'],
       '#states' => array(
         'visible' => array(
