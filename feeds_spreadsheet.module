@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * The main file of the feeds_spreadsheet module.
+ */
+
+/**
+ * Implements hook_feeds_plugins().
+ */
+function feeds_spreadsheet_feeds_plugins() {
+  $info = array();
+  $info['FeedsSpreadsheetParser'] = array(
+    'name'        => 'Spreadsheet Parser',
+    'description' => 'Parse Big Excel datasets.',
+    'handler'     => array(
+      'parent' => 'FeedsParser',
+      'class'  => 'FeedsSpreadsheetParser',
+      'file'   => 'FeedsSpreadsheetParser.inc',
+      'path'   => drupal_get_path('module', 'feeds_spreadsheet'),
+    ),
+  );
+  return $info;
+}

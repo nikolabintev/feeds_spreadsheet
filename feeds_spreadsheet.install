@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the feeds_excel_custom module.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function feeds_spreadsheet_enable() {
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}

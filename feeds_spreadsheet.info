@@ -1,0 +1,7 @@
+name = Feeds Spreadsheet
+description = Provides an Excel file parser for the Feeds module using Spreadsheet Parser library.
+core = 7.x
+package = Feeds
+dependencies[] = feeds
+dependencies[] = composer_manager
+files[] = FeedsSpreadsheetParser.inc

@@ -1,0 +1,5 @@
+{
+  "require": {
+    "akeneo-labs/spreadsheet-parser": ">=1.2.2"
+  }
+}
