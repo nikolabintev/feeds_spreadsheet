@@ -72,6 +72,7 @@ class FeedsSpreadsheetParser extends FeedsParser {
       throw new Exception(t('No sheets.'));
     }
 
+    // Find the total number of rows per sheet.
     if (empty($state->total) && !isset($state->sheets_max_row)) {
       $state->sheets_max_row = [];
       $state->total = 0;
@@ -90,7 +91,6 @@ class FeedsSpreadsheetParser extends FeedsParser {
 
     $batch_processed = 0;
     foreach ($sheets as $sheet_num => $sheet_title) {
-
       if ($state->pointer['sheet_pointer'] && $state->pointer['sheet_pointer'] > $sheet_num) {
         // Skip the already processed sheets.
         continue;
