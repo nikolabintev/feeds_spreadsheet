@@ -209,7 +209,7 @@ class FeedsSpreadsheetParser extends FeedsParser {
     $form['chunk_size'] = array(
       '#type' => 'select',
       '#title' => t('Chunk size'),
-      '#options' => drupal_map_assoc(array(1, 5, 10, 20, 50, 100, 200)),
+      '#options' => drupal_map_assoc(array(1, 5, 10, 20, 50, 100, 200, 500, 1000)),
       '#description' => t("Select quantity of rows which will be parsed per ounce. <b>Notice: selected quantity will be multiplied on sheets' quantity.</b>"),
       '#default_value' => $this->config['chunk_size'],
     );
